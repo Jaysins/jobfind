@@ -3,7 +3,7 @@ import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => (
   <footer className="">
-    <div className="bg-[#f3f4ff] py-10 px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="bg-[#f3f4ff] p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <h1 className="text-2xl font-bold text-blue-700">JobFind</h1>
         <p className="text-sm text-slate-600 mt-2">

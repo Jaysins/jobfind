@@ -2,7 +2,7 @@ import { FaQuoteRight, FaStar } from "react-icons/fa";
 import Sarah from '../assets/images/image.svg';
 
 const Testimonials = () => (
-  <div className="bg-white py-20 px-4">
+  <div className=".container_padded">
     <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-3xl md:text-4xl font-semibold text-[#1E1E57] mb-12">Our customers sharing their experiences</h2>
       <div className="grid md:grid-cols-3 gap-6">
