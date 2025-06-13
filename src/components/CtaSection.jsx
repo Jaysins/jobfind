@@ -1,5 +1,3 @@
-import React from "react";
-
 const CtaSection = () => (
   <div className="w-full flex justify-center items-center py-16 px-4 bg-white">
     <div className="bg-gradient-to-br from-[#B1C8FF] to-[#576ADF] p-4 rounded-3xl shadow-lg w-full max-w-5xl">

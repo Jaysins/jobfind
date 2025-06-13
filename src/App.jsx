@@ -1,22 +1,14 @@
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import JobFeatures from './components/JobFeatures';
-import JobSearchFeature from './components/JobSearchFeature';
-import Testimonials from './components/Testimonials';
-import CtaSection from './components/CtaSection';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom'
+import LandingPage from './pages/LandingPage';
+import Waitlist from './pages/Waitlist';
+
 
 function App() {
   return (
-    <div className="font-sans bg-[#fbfbfb]">
-      <Navbar />
-      <HeroSection />
-      <JobFeatures />
-      <JobSearchFeature />
-      <Testimonials />
-      <CtaSection />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/waitlist" element={<Waitlist />} />
+    </Routes>
   );
 }
 
