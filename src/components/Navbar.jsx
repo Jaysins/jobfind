@@ -50,12 +50,15 @@ const Navbar = () => {
             <li className="hover:text-blue-700 cursor-pointer">Contact</li>
           </ul>
           <div className="flex flex-col items-center gap-2 pt-4">
-            <button className="w-4/5 px-4 py-2 border border-[#576ADF] text-[#576ADF] rounded hover:bg-blue-50">
+            <button className="w-4/5 px-6 py-2 bg-[#576ADF] text-white rounded hover:bg-blue-700">
+              Join The Waitlist
+            </button>  
+            {/* <button className="w-4/5 px-4 py-2 border border-[#576ADF] text-[#576ADF] rounded hover:bg-blue-50">
               Login
             </button>
             <button className="w-4/5 px-6 py-2 bg-[#576ADF] text-white rounded hover:bg-blue-700">
               Sign up
-            </button>
+            </button> */}
           </div>
         </div>
       )}
