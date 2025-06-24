@@ -32,3 +32,13 @@ export async function submitWaitlist({ name, email }) {
 }
 
 
+
+
+export async function triggerBase() {
+  try {
+    // Adjust to your actual ping endpoint
+    await api.get('/docs');
+  } catch (err) {
+    console.warn("Backend wake-up failed (can ignore if cold start)", err);
+  }
+}

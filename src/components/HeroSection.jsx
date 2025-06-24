@@ -5,6 +5,8 @@ import Google from "../assets/images/google.svg";
 import Amazon from "../assets/images/amazon.svg";
 import Microsoft from "../assets/images/microsoft.svg";
 import Nestle from "../assets/images/nestle.svg";
+import { Link } from "react-router-dom";
+
 
 const HeroSection = () => {
   return (
@@ -18,8 +20,12 @@ const HeroSection = () => {
         skills, goals, and location preferences.
       </p>
       <button className="mt-8 px-6 py-3 bg-[#576ADF] text-white rounded hover:bg-blue-700">
-        Start Your Journey
-      </button>
+          <Link
+            to="/waitlist"
+            className="mt-8 px-6 py-3 bg-[#576ADF] text-white rounded hover:bg-blue-700"
+          >
+            Start Your Journey
+          </Link>      </button>
       <div className="my-12 relative flex justify-center items-center">
         <div className="relative bg-[#F4F6FF] rounded-t-2xl pt-2 px-2 pb-0 border-t-8 border-l-8 border-r-8 border-[#576ADF] overflow-hidden">
           <div className="relative max-w-5xl mx-auto overflow-hidden">

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { triggerBase } from '../services/waitlist';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import JobFeatures from '../components/JobFeatures';
@@ -6,7 +8,11 @@ import Testimonials from '../components/Testimonials';
 import CtaSection from '../components/CtaSection';
 import Footer from '../components/Footer';
 
-function LandingPage() {
+const LandingPage = () => {
+  useEffect(() => {
+    triggerBase();
+  }, []);
+
   return (
     <div className="font-sans bg-[#fbfbfb]">
       <Navbar />
@@ -18,6 +24,6 @@ function LandingPage() {
       <Footer />
     </div>
   );
-}
+};
 
 export default LandingPage;
