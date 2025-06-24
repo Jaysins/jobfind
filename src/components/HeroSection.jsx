@@ -24,7 +24,7 @@ const HeroSection = () => {
             to="/waitlist"
             className="mt-8 px-6 py-3 bg-[#576ADF] text-white rounded hover:bg-blue-700"
           >
-            Join The Waitlist
+            Start Your Journey
           </Link>      </button>
       <div className="my-12 relative flex justify-center items-center">
         <div className="relative bg-[#F4F6FF] rounded-t-2xl pt-2 px-2 pb-0 border-t-8 border-l-8 border-r-8 border-[#576ADF] overflow-hidden">
