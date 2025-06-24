@@ -19,7 +19,7 @@ const LandingPage = () => {
       <HeroSection />
       <JobFeatures />
       <JobSearchFeature />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CtaSection />
       <Footer />
     </div>

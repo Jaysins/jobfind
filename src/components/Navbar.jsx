@@ -10,7 +10,9 @@ const Navbar = () => {
   return (
     <nav className=" px-6 py-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold text-[#576ADF]">JobFind</div>
+        <Link 
+        to = '/'
+        className="text-2xl font-bold text-[#576ADF]">JobFind</Link>
 
         <div className="md:hidden">
           <button onClick={toggleMenu}>

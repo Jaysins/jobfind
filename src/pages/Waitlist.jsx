@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Doodles from "../assets/images/doodles.svg";
 import { submitWaitlist } from "../services/waitlist";
+import { Link } from "react-router-dom";
 
 const Waitlist = () => {
   const [name, setName] = useState("");
@@ -37,7 +38,7 @@ const Waitlist = () => {
   return (
     <section className="min-h-screen bg-[#f0f4fc]">
       <div className="px-10 py-8">
-        <p className="text-[#576ADF] text-lg font-bold">JobFind</p>
+        <Link to="/" className="text-[#576ADF] text-lg font-bold">JobFind</Link>
       </div>
       <div className="flex flex-col items-center justify-center overflow-hidden">
         <div className="bg-[#EFF2F9] shadow-xl rounded-lg p-8 w-[400px] text-center z-10">
