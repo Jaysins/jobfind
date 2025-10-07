@@ -32,19 +32,24 @@ const Navbar = () => {
         </ul>
 
         <div className="hidden md:flex gap-4">
-          {/* <button className="px-4 py-2 border border-[#576ADF] text-[#576ADF] rounded hover:bg-blue-50">
+          <Link 
+          to="/waitlist"
+          className="px-6 py-2 border border-[#576ADF] text-[#576ADF] rounded-lg hover:bg-blue-50">
             Login
-          </button>
-          <button className="px-6 py-2 bg-[#576ADF] text-white rounded hover:bg-blue-700">
+          </Link>
+         
+          <Link 
+           to="/waitlist"
+           className="px-8 py-2 bg-[#576ADF] text-white rounded-lg hover:bg-blue-700">
             Sign up
-          </button> */}
+          </Link>
 
-          <Link
+          {/* <Link
             to="/waitlist"
             className="px-6 py-2 bg-[#576ADF] text-white rounded hover:bg-blue-700"
           >
             Join The Waitlist
-          </Link>
+          </Link> */}
         </div>
       </div>
 
