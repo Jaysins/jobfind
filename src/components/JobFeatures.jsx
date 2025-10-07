@@ -29,16 +29,16 @@ const JobFeatures = () => (
 
     <div className="grid md:grid-cols-3 gap-6 mt-16 text-center text-[#4C4CFC]">
         <div>
-          <h4 className="text-3xl font-semibold">50,000+</h4>
-          <p className="text-md text-[#1E254E] mt-2">Active Job Seekers</p>
+          <h4 className="text-4xl font-semibold">50,000+</h4>
+          <p className="text-md font-semibold text-[#1E254E] mt-2">Active Job Seekers</p>
         </div>
         <div>
-          <h4 className="text-3xl font-semibold">95%</h4>
-          <p className="text-md text-[#1E254E] mt-2">Match Accuracy</p>
+          <h4 className="text-4xl font-semibold">95%</h4>
+          <p className="text-md font-semibold text-[#1E254E] mt-2">Match Accuracy</p>
         </div>
         <div>
-          <h4 className="text-3xl font-semibold">35,000+</h4>
-          <p className="text-md text-[#1E254E] mt-2">Successful Placements</p>
+          <h4 className="text-4xl font-semibold">35,000+</h4>
+          <p className="text-md  font-semibold text-[#1E254E] mt-2">Successful Placements</p>
         </div>
       </div>
   </div>
