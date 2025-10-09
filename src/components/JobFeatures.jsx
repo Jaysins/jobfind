@@ -1,47 +1,92 @@
-import { AiOutlineRobot } from "react-icons/ai";
-import { FiZap } from "react-icons/fi";
-import { FaGlobe } from "react-icons/fa";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const JobFeatures = () => (
-  <div className=" container_padded  ">
-    <div className="max-w-6xl mx-auto bg-[#1E1E57] text-white text-center px-10 py-20 rounded-xl">
-      <h2 className="text-3xl md:text-4xl font-semibold mb-4">Power Features for Smarter Job Hunting</h2>
-      <p className="text-sm md:text-base max-w-2xl mx-auto mb-12">Our proprietary AI technology revolutionizes how you discover and apply&nbsp; to opportunities that match your unique profile and career aspirations</p>
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="bg-[#2A2A6E] rounded-lg p-6 text-left">
-          <AiOutlineRobot className="text-white text-2xl mb-4" />
-          <h3 className="font-semibold text-lg mb-2">Clarity Engine</h3>
-          <p className="text-sm leading-relaxed py-6">Our proprietary AI analyzes job descriptions and your profile to surface the most relevant opportunities, cutting through the noise of generic&nbsp; job boards</p>
-        </div>
-        <div className="bg-[#2A2A6E] rounded-lg p-6 text-left">
-          <FiZap className="text-white text-2xl mb-4" />
-          <h3 className="font-semibold text-lg mb-2">FitScore</h3>
-          <p className="text-sm leading-relaxed py-6">Get instant compatibility ratings for every role. Our advanced algorithm considers skills, experience, culture fit, and career trajectory to&nbsp; show your match percentage</p>
-        </div>
-        <div className="bg-[#2A2A6E] rounded-lg p-6 text-left">
-          <FaGlobe className="text-white text-2xl mb-4" />
-          <h3 className="font-semibold text-lg mb-2">Visa Filters</h3>
-          <p className="text-sm leading-relaxed py-6">Navigate international opportunities with confidence. Filter jobs by&nbsp; visa sponsorship availability and get guidance on requirements for your target countries</p>
+const JobFeatures = () => {
+  const features = [
+    {
+      title: "Career Mapping Engine",
+      desc: "AI-powered career path prediction",
+      img: "/images/career-mapping.png",
+    },
+    {
+      title: "Application Tracker",
+      desc: "Track resume views, rejections, assessments, interview dates",
+      img: "/images/application-tracker.png",
+    },
+    {
+      title: "FitScore",
+      desc: "Get instant compatibility ratings for every role.",
+      img: "/images/fitscore.png",
+    },
+    {
+      title: "Visa Filter",
+      desc: "Navigate international opportunities with confidence.",
+      img: "/images/visa-filter.png",
+    },
+    {
+      title: "Clarity Engine",
+      desc: "Daily micro-actions and suggested learning to close gaps",
+      img: "/images/clarity-engine.png",
+    },
+  ];
+
+  return (
+    <section className="bg-[#F8F9FC] py-20 px-6 md:px-16">
+      {/* Heading */}
+      <div className="text-center mb-14">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          Smart Features for Career Growth
+        </h2>
+        <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+          Our AI technology revolutionizes how you discover and apply to
+          opportunities that match your unique profile and career aspirations
+        </p>
+      </div>
+
+      {/* Features Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="bg-[#0E0E2C] rounded-xl p-6 text-white text-center w-full max-w-[340px] shadow-md hover:shadow-xl transition"
+            style={{
+              backgroundImage:
+                "url('https://www.transparenttextures.com/patterns/dark-mosaic.png')",
+              backgroundSize: "cover",
+            }}
+          >
+            <img
+              src={feature.img}
+              alt={feature.title}
+              className="w-full mb-4 rounded-lg"
+            />
+            <h3 className="text-lg font-semibold">{feature.title}</h3>
+            <p className="text-gray-300 text-sm mt-2">{feature.desc}</p>
+          </div>
+        ))}
+
+        {/* Call to Action Box */}
+        <div
+          className="bg-[#0E0E2C] rounded-xl p-8 text-white flex flex-col items-center justify-center text-center w-full max-w-[340px]"
+          style={{
+            backgroundImage:
+              "url('https://www.transparenttextures.com/patterns/dark-mosaic.png')",
+            backgroundSize: "cover",
+          }}
+        >
+          <h3 className="text-lg font-semibold mb-3">
+            Ready to begin your <br /> career journey?
+          </h3>
+          <Link
+            to="/waitlist"
+            className="bg-[#4E5CF3] text-white px-6 py-2 rounded-md font-medium hover:bg-[#3b4ad9] transition"
+          >
+            Join the Waitlist
+          </Link>
         </div>
       </div>
-      
-    </div>
-
-    <div className="grid md:grid-cols-3 gap-6 mt-16 text-center text-[#4C4CFC]">
-        <div>
-          <h4 className="text-4xl font-semibold">50,000+</h4>
-          <p className="text-md font-semibold text-[#1E254E] mt-2">Active Job Seekers</p>
-        </div>
-        <div>
-          <h4 className="text-4xl font-semibold">95%</h4>
-          <p className="text-md font-semibold text-[#1E254E] mt-2">Match Accuracy</p>
-        </div>
-        <div>
-          <h4 className="text-4xl font-semibold">35,000+</h4>
-          <p className="text-md  font-semibold text-[#1E254E] mt-2">Successful Placements</p>
-        </div>
-      </div>
-  </div>
-);
+    </section>
+  );
+};
 
 export default JobFeatures;

@@ -3,7 +3,7 @@ import { triggerBase } from '../services/waitlist';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import JobFeatures from '../components/JobFeatures';
-import JobSearchFeature from '../components/JobSearchFeature';
+import HowItWorksSection from '../components/HowItWorksSection';
 import Testimonials from '../components/Testimonials';
 import CtaSection from '../components/CtaSection';
 import Footer from '../components/Footer';
@@ -18,7 +18,7 @@ const LandingPage = () => {
       <Navbar />
       <HeroSection />
       <JobFeatures />
-      <JobSearchFeature />
+      <HowItWorksSection />
       {/* <Testimonials /> */}
       <CtaSection />
       <Footer />

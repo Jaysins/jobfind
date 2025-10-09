@@ -39,8 +39,8 @@ const HeroSection = () => {
             <div className="absolute bottom-0 left-0 w-full h-40 z-20 bg-gradient-to-t from-[#F4F6FF] via-[#F4F6FF]/80 to-transparent blur-2xl pointer-events-none" />
           </div>
         </div>
-      </div>
-<div className="w-full px-4 text-center">
+      </div>*/}
+<div className="w-full px-4 py-32 text-center">
   <p className="text-base sm:text-lg text-[#1E254E]">
     Job opportunities from over top companies and more
   </p>
@@ -76,7 +76,7 @@ const HeroSection = () => {
       className="h-10 sm:h-12 md:h-10 object-contain"
     />
   </div>
-</div> */}
+</div> 
 
     </section>
   );

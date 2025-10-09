@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 
 const Navbar = () => {
   return (
-    <nav className="bg-[#F8F9FC] w-full">
+    <nav className="w-full">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Left Logo */}
         <div className="flex items-center space-x-2">
