@@ -11,10 +11,10 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <section className=" container_padded text-center text-[#1E254E] ">
-      <h1 className="text-4xl md:text-5xl  text-gray-800">
-        JobFind- Your AI Career Pilot
+      <h1 className="text-4xl pb-52 md:text-5xl  text-gray-800 font-bold">
+        The
       </h1>
-      <p className="mt-6 text-[#616878] max-w-2xl mx-auto text-lg">
+      {/* <p className="mt-6 text-[#616878] max-w-2xl mx-auto text-lg">
         Transform your job search with intelligent matching, personalized
         insights, and visa guidance. Find opportunities that truly fit your
         skills, goals, and location preferences.
@@ -76,7 +76,7 @@ const HeroSection = () => {
       className="h-10 sm:h-12 md:h-10 object-contain"
     />
   </div>
-</div>
+</div> */}
 
     </section>
   );
