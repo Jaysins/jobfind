@@ -1,39 +1,58 @@
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
+import { MdLocationOn, MdEmail } from "react-icons/md";
 
 const Footer = () => (
-  <footer className="">
-    <div className="bg-[#f3f4ff] p-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+  <footer className="bg-[#090F1A] text-white py-12 px-8 md:px-20">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {/* Left Section */}
       <div>
-        <h1 className="text-2xl font-bold text-blue-700">JobFind</h1>
-        <p className="text-sm text-slate-600 my-2">
-          JobFind is the right platform for job seekers searching for jobs
+        <div className="flex items-center gap-2 mb-4">
+          <div className="bg-[#5E6AE1] px-4 py-1 rounded-full text-sm font-semibold">
+            <span className="flex items-center gap-1">
+               <CiSearch className="text-lg text-white" />  <span>JOBFIND AI</span>
+            </span>
+          </div>
+        </div>
+        <p className="text-gray-300 text-sm leading-relaxed">
+          AI-powered career progression platform helping students and professionals
+          navigate their career journey with predictive insights and personalized guidance.
         </p>
       </div>
 
-      <div className="text-center">
-        <h4 className="text-md font-medium text-slate-900 mb-2">Company</h4>
-        <ul className="space-y-1 text-slate-700 text-sm">
-          <li className="py-2">About</li>
-          <li className="py-2">Features</li>
-          <li className="py-2">Pricing</li>
-          <li className="py-2">FAQs</li>
+      {/* Middle Section */}
+      <div>
+        <h4 className="font-semibold text-white mb-4">Company</h4>
+        <ul className="space-y-2 text-gray-300 text-sm">
+          <li>About us</li>
+          <li>Features</li>
+          <li>How it works</li>
+          <li>FAQs</li>
+          <li>Terms</li>
         </ul>
       </div>
 
+      {/* Right Section */}
       <div>
-        <h4 className="text-md font-medium text-slate-900 mb-2">Contact</h4>
-        <p className="text-sm grid text-slate-700">
-          <span className="font-semibold">123 Bay Street, Toronto, Canada M4Y 0A7</span> 
-          <span className="my-2">+1 444 999 7400</span>
-          <span>info@jobfindai.com</span>
-          
-        </p>
-        <div className="flex space-x-4 mt-3 text-blue-700 text-lg">
-          <FaLinkedin className="cursor-pointer" />
-          <FaInstagram className="cursor-pointer" />
+        <h4 className="font-semibold text-white mb-4">Contact</h4>
+        <div className="space-y-2 text-gray-300 text-sm">
+          <p className="flex items-start gap-2">
+            <MdLocationOn className="text-lg mt-1" />
+            8 The Green, Ste E Dover, Delaware. <br />
+            Zip code 19901, USA
+          </p>
+          <p className="flex items-center gap-2">
+            <MdEmail className="text-lg" /> info@jobfindai.io
+          </p>
+          <div className="flex space-x-4 text-lg mt-3">
+            <FaLinkedin className="hover:text-[#5E6AE1] cursor-pointer" />
+            <FaInstagram className="hover:text-[#5E6AE1] cursor-pointer" />
+          </div>
         </div>
       </div>
     </div>
+
+    
   </footer>
 );
 
