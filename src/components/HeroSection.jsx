@@ -9,75 +9,78 @@ import Microsoft from "../assets/images/microsoft.svg";
 import Nestle from "../assets/images/nestle.svg";
 
 const HeroSection = () => {
-  const [showText, setShowText] = useState(false);
-  const [showParagraph, setShowParagraph] = useState(false);
+  const [typedTitle, setTypedTitle] = useState("");
+  const [typedParagraph, setTypedParagraph] = useState("");
+  const [showButton, setShowButton] = useState(false);
   const [showLogos, setShowLogos] = useState(false);
-  const [typedText, setTypedText] = useState("");
 
-  const fullText = "The";
+  const fullTitle = "The Smarter Way to Find Opportunities";
+  const fullParagraph =
+    "Transform your job search with intelligent matching, personalized insights, and visa guidance. Find opportunities that truly fit your skills, goals, and location preferences.";
 
   useEffect(() => {
-    // Typing animation
-    let index = 0;
-    const typingInterval = setInterval(() => {
-      if (index < fullText.length) {
-        setTypedText((prev) => prev + fullText[index]);
-        index++;
+    let titleIndex = 0;
+    let paraIndex = 0;
+
+    // Step 1: Type Title
+    const typeTitle = () => {
+      if (titleIndex < fullTitle.length) {
+        setTypedTitle((prev) => prev + fullTitle[titleIndex]);
+        titleIndex++;
+        setTimeout(typeTitle, 100);
       } else {
-        clearInterval(typingInterval);
-        setShowText(true);
-
-        // Reveal paragraph after short delay
         setTimeout(() => {
-          setShowParagraph(true);
-        }, 500);
-
-        // Reveal logos after another short delay
+          typeParagraph();
+        }, 800);
+      }
+    };
+    const typeParagraph = () => {
+      if (paraIndex < fullParagraph.length) {
+        setTypedParagraph((prev) => prev + fullParagraph[paraIndex]);
+        paraIndex++;
+        setTimeout(typeParagraph, 40); 
+      } else {
+        setTimeout(() => {
+          setShowButton(true);
+        }, 700);
         setTimeout(() => {
           setShowLogos(true);
-        }, 1200);
+        }, 1400);
       }
-    }, 250);
+    };
 
-    return () => clearInterval(typingInterval);
+    typeTitle();
   }, []);
 
   return (
     <section className="container_padded text-center text-[#1E254E] py-32 transition-all duration-500">
-      {/* Typing text */}
-      <h1 className="text-4xl md:text-5xl text-gray-800 font-bold h-20">
-        {typedText}
+      {/* Title typing */}
+      <h1 className="text-4xl md:text-5xl text-gray-800 font-bold h-24">
+        {typedTitle}
         <span className="animate-pulse">|</span>
       </h1>
 
-      {/* Paragraph appears after typing */}
-      {showParagraph && (
-        <p
-          className={`mt-6 text-[#616878] max-w-2xl mx-auto text-lg opacity-0 animate-fade-in`}
-        >
-          Transform your job search with intelligent matching, personalized
-          insights, and visa guidance. Find opportunities that truly fit your
-          skills, goals, and location preferences.
+      {/* Paragraph typing */}
+      {typedParagraph && (
+        <p className="mt-6 text-[#616878] max-w-2xl mx-auto text-lg leading-relaxed">
+          {typedParagraph}
+          <span className="animate-pulse">|</span>
         </p>
       )}
 
-      {/* Button appears next */}
-      {showParagraph && (
-        <div
-          className={`transition-all duration-700 delay-500 ${
-            showLogos ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-        >
+      {/* Button fade-in */}
+      {showButton && (
+        <div className="transition-all duration-700 opacity-100 translate-y-0 mt-8">
           <Link
             to="/waitlist"
-            className="mt-8 inline-block px-6 py-3 bg-[#576ADF] text-white rounded hover:bg-blue-700 transition"
+            className="inline-block px-6 py-3 bg-[#576ADF] text-white rounded hover:bg-blue-700 transition"
           >
             Start Your Journey
           </Link>
         </div>
       )}
 
-      {/* Logos appear last */}
+      
       {showLogos && (
         <div className="mt-16 w-full px-4 text-center animate-fade-in-slow">
           <p className="text-base sm:text-lg text-[#1E254E] mb-6">

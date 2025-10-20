@@ -42,8 +42,8 @@ const UniversityDashboard = () => {
             key={index}
             className="bg-white rounded-xl p-8 shadow-md text-center hover:shadow-lg transition-all"
           >
-            <div className="w-14 h-14 mx-auto mb-4 bg-[#E8E9FE] flex items-center justify-center rounded-full">
-              <img src={feature.icon} alt={feature.title} className="w-7 h-7" />
+            <div className="w-14 h-14 mx-auto mb-4 bg-[#e2e6fb] flex items-center justify-center rounded-full">
+              <img src={feature.icon} alt={feature.title} className="w-15 h-15" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
             <p className="text-gray-600 text-sm">{feature.desc}</p>

@@ -3,6 +3,7 @@ import June from "../assets/images/june_12.svg";
 import smartNudges from "../assets/images/smart_nudges.svg";
 import fiftyFour from "../assets/images/fifty-four.png";
 import Dod from "../assets/images/director_of_designs.svg";
+import LoadingScore from "../assets/images/loading_bar.svg"
 
 
 const features = [
@@ -19,7 +20,7 @@ const features = [
   {
     title: 'FitScore',
     desc: 'Get instant compatibility ratings for every role.',
-    img: '/images/fitscore.png',
+    img: LoadingScore,
   },
   {
     title: 'Visa Filter',
