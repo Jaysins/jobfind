@@ -1,4 +1,4 @@
-import { FiUserPlus, FiUpload, FiBarChart, FiTarget } from "react-icons/fi";
+import { FiUserPlus, FiUpload, FiBarChart, FiTarget, FiArrowRight } from "react-icons/fi";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -33,12 +33,17 @@ const HowItWorksSection = () => {
         From profile analysis to career acceleration in three simple steps
       </p>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-6 max-w-6xl mx-auto">
         {steps.map((step, index) => (
-          <div key={index} className="flex flex-col items-center px-4">
+          <div key={index} className="flex flex-col items-center text-center relative">
             {step.icon}
             <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
-            <p className="text-sm text-gray-300 leading-relaxed">{step.desc}</p>
+            <p className="text-sm text-gray-300 leading-relaxed max-w-xs">{step.desc}</p>
+
+            {/* Show arrow except after the last step */}
+            {index !== steps.length - 1 && (
+              <FiArrowRight className="hidden lg:block text-[#FF6B00] text-3xl absolute top-1/2 right-[-35px] transform -translate-y-1/2" />
+            )}
           </div>
         ))}
       </div>
